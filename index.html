@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.4.0/dist/aframe-extras.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/dev/aframe/build/aframe-ar.js"></script>
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+        <a-marker preset="hiro">
+          <a-light type="ambient" color="#fff" intensity="1"></a-light>
+            <a-entity
+            position="0 0 0"
+            rotation="0 0 .5"
+            scale="0.05 0.05 0.05"
+            gltf-model="3D Model/NTC Studios Logo/NTC Logo_3D_SCENE_v4.glb"
+            animation-mixer="clip:NTCAction ;loop:repeat"
+            ></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
